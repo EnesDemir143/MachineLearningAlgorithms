@@ -9,6 +9,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from sqlalchemy import create_engine
+from config import DB_CONFIG
+
 
 
 # In[188]:
@@ -88,16 +91,11 @@ def gradient_Descent(x,y,w,b,iteration,learning_rate,lambda_):
 
 
 def train_logistic_regression(): 
-    conn = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='Enes125223dür.',
-    database='diabates'
-)
-    
-    sorgu = 'SELECT * FROM diabetes_data'
-    df = pd.read_sql(sorgu,conn)
-    conn.close()
+
+    engine = create_engine(f'mysql+mysqlconnector://{DB_CONFIG["user"]}:{DB_CONFIG["password"]}@{DB_CONFIG["host"]}/{DB_CONFIG["database"]}')
+
+    # Veriyi okuma
+    df = pd.read_sql('SELECT * FROM diabetes_data', engine)
 
     x=df.drop(columns="Outcome").to_numpy()
     y=df["Outcome"].to_numpy()

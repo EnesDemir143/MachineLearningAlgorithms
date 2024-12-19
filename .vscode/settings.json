@@ -4,4 +4,15 @@
     "python.testing.pytestArgs": [
         "."
     ]
+    ,
+    "files.exclude": {
+        "config.py": true,
+        "**/*.env": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        ".pytest_cache":true,
+        ".vscode":true,
+        "venv":true
+    }
 }
+

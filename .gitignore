@@ -1,0 +1,61 @@
+# Sanal ortam
+venv/
+env/
+.env/
+.venv/
+
+# Gizli bilgiler
+*.env
+config.py
+settings.py
+credentials.json
+secrets.json
+
+# Python cache dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE dosyaları
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Veritabanı
+*.sqlite3
+*.db
+
+# Log dosyaları
+*.log
+logs/
+
+# Medya ve statik dosyalar (geliştirme ortamına özel)
+media/
+static/
+uploads/
+
+# Derleme dosyaları
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+/.vscode
+.vscode/settings.json
