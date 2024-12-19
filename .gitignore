@@ -13,6 +13,7 @@ secrets.json
 
 # Python cache dosyaları
 __pycache__/
+LogisticalRegression/__pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
