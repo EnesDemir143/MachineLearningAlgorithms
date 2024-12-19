@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sqlalchemy import create_engine
-from config import DB_CONFIG
+from LogisticRegression.config import DB_CONFIG
 
 
 
